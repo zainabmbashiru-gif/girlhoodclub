@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3MH686CQ9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Z3MH686CQ9');
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>The Girlhood Club ♡</title>
 
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3MH686CQ9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Z3MH686CQ9');
+</script>
+
 <style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -25,62 +31,36 @@ html {
 }
 
 body {
-  padding-left: 240px;
-box-sizing: border-box;
   margin: 0;
+  padding-left: 240px;
   font-family: Georgia, "Times New Roman", serif;
   color: #7d4a64;
   background: #fff;
   line-height: 1.7;
 }
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: rgba(255, 248, 252, 0.96);
-  border-bottom: 1px solid #f1dce7;
-  padding: 18px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+main {
+  width: 100%;
+  min-width: 0;
 }
 
-.logo {
-  color: #a84f7c;
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-decoration: none;
-}
+/* =========================
+   SIDEBAR
+========================= */
 
-nav div {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: #7d4a64;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #c66b98;
-}.sidebar {
+.sidebar {
   position: fixed;
   left: 0;
   top: 0;
   width: 240px;
-  box-sizing: border-box;
   height: 100vh;
   background: #fff8fc;
   border-right: 1px solid #f1dce7;
   padding: 30px 20px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   z-index: 1000;
+  overflow-y: auto;
 }
 
 .sidebar-logo {
@@ -110,6 +90,7 @@ nav a:hover {
 .sidebar-bottom a:hover {
   background: #f8e5ef;
   color: #c66b98;
+  transform: translateX(3px);
 }
 
 .sidebar-bottom {
@@ -118,6 +99,10 @@ nav a:hover {
   flex-direction: column;
   gap: 8px;
 }
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
   min-height: 85vh;
@@ -161,10 +146,12 @@ nav a:hover {
   padding: 13px 24px;
   border-radius: 999px;
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-3px);
+  background: #b85b88;
 }
 
 .sparkles {
@@ -172,6 +159,10 @@ nav a:hover {
   margin-top: 35px;
   animation: floatSparkle 3s ease-in-out infinite;
 }
+
+/* =========================
+   NOTE
+========================= */
 
 .note {
   padding: 80px 7%;
@@ -193,6 +184,10 @@ nav a:hover {
   color: #b65382;
   margin-top: 30px;
 }
+
+/* =========================
+   MOODBOARD
+========================= */
 
 .inspiration {
   background: #fff8fc;
@@ -240,6 +235,10 @@ nav a:hover {
   color: #a84f7c;
 }
 
+/* =========================
+   CATEGORIES
+========================= */
+
 .categories {
   padding: 80px 7%;
 }
@@ -272,6 +271,10 @@ nav a:hover {
   color: #a84f7c;
 }
 
+/* =========================
+   BLOG
+========================= */
+
 .latest {
   background: #fff8fc;
   padding: 80px 7%;
@@ -286,6 +289,10 @@ nav a:hover {
   font-weight: bold;
   text-decoration: none;
 }
+
+/* =========================
+   ARTICLES
+========================= */
 
 .article {
   background: #fff;
@@ -322,6 +329,10 @@ nav a:hover {
   display: block;
 }
 
+/* =========================
+   QUIZ
+========================= */
+
 .quiz {
   background: #fff8fc;
   padding: 80px 7%;
@@ -357,6 +368,7 @@ nav a:hover {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1rem;
   cursor: pointer;
+  transition: 0.2s ease;
 }
 
 .quiz-question button:hover,
@@ -369,6 +381,10 @@ nav a:hover {
   color: #a84f7c;
   font-size: 2rem;
 }
+
+/* =========================
+   NEWSLETTER
+========================= */
 
 .newsletter {
   padding: 80px 7%;
@@ -400,12 +416,17 @@ nav a:hover {
   background: #c66b98;
   color: white;
   cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 #message {
   margin-top: 15px;
   color: #a84f7c;
 }
+
+/* =========================
+   TOP BUTTON
+========================= */
 
 .top-button {
   display: block;
@@ -420,6 +441,10 @@ nav a:hover {
   cursor: pointer;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   background: #fff8fc;
   text-align: center;
@@ -427,14 +452,9 @@ footer {
   border-top: 1px solid #f1dce7;
 }
 
-@keyframes floatSparkle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
+/* =========================
+   ANIMATIONS
+========================= */
 
 .category-card,
 .post-card {
@@ -446,15 +466,67 @@ footer {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@media (max-width: 650px) {
-  nav {
-    flex-direction: column;
+@keyframes floatSparkle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+  body {
+    padding-left: 0;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid #f1dce7;
+    padding: 20px;
+  }
+
+  .sidebar-logo {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-links,
+  .sidebar-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  .sidebar-bottom {
+    margin-top: 15px;
+  }
+
+  .sidebar-links a,
+  .sidebar-bottom a {
+    text-align: center;
+    padding: 9px 6px;
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    min-height: 75vh;
+    padding: 60px 6%;
   }
 
   .hero h1 {
@@ -471,46 +543,67 @@ footer {
     margin-bottom: 10px;
   }
 }
+
 </style>
 </head>
 
 <body>
-  
+
+<!-- =========================
+     SIDEBAR
+========================= -->
+
 <nav class="sidebar">
+
   <div class="sidebar-logo">
     🎀 THE GIRLHOOD CLUB
   </div>
 
   <div class="sidebar-links">
+
     <a href="#home">🏠 Home</a>
     <a href="#categories">✨ Explore</a>
     <a href="#latest">📝 The Blog</a>
     <a href="#quiz">🧠 Quizzes</a>
     <a href="#newsletter">💌 Join the Club</a>
+
     <a href="#home">🎀 Girlhood</a>
-    <a href="#home">💅 Glow-Up</a>
-    <a href="#home">🫶 Friendship</a>
+    <a href="#beauty-guide">💅 Glow-Up</a>
+    <a href="#girltalk-guide">🫶 Friendship</a>
     <a href="#home">📚 Study Hub</a>
     <a href="#home">🎧 Music</a>
     <a href="#home">📔 Journal</a>
     <a href="#home">🔖 Saved</a>
+
   </div>
 
   <div class="sidebar-bottom">
+
     <a href="#home">💎 Girlhood+</a>
     <a href="#home">⚙️ Settings</a>
     <a href="#home">👤 Profile</a>
+
   </div>
-  
+
 </nav>
 
 <main>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="eyebrow">♡ a little corner of the internet ♡</div>
+<!-- =========================
+     HOME
+========================= -->
 
-    <h1>For the girls with <em>big dreams</em> & soft hearts.</h1>
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="eyebrow">
+      ♡ a little corner of the internet ♡
+    </div>
+
+    <h1>
+      For the girls with <em>big dreams</em> & soft hearts.
+    </h1>
 
     <p>
       Your happy place for fashion, beauty, self-care, confidence,
@@ -518,15 +611,29 @@ footer {
       that make life feel magical.
     </p>
 
-    <a class="button" href="#latest">Explore the blog →</a>
+    <a class="button" href="#latest">
+      Explore the blog →
+    </a>
 
-    <div class="sparkles">୨୧ ✧ ♡ ✧ ୨୧</div>
+    <div class="sparkles">
+      ୨୧ ✧ ♡ ✧ ୨୧
+    </div>
+
   </div>
+
 </section>
 
+<!-- =========================
+     LITTLE REMINDER
+========================= -->
+
 <section class="note">
+
   <div class="note-box">
-    <div class="eyebrow">♡ a little reminder ♡</div>
+
+    <div class="eyebrow">
+      ♡ a little reminder ♡
+    </div>
 
     <h2>Dear girl,</h2>
 
@@ -539,58 +646,121 @@ footer {
     </p>
 
     <h3>🎀 Dress like yourself</h3>
-    <p>Wear things that make you feel comfortable, confident and completely you.</p>
+
+    <p>
+      Wear things that make you feel comfortable, confident and completely you.
+    </p>
 
     <h3>💄 Little beauty rituals</h3>
-    <p>Enjoy simple little routines that make you feel fresh and happy.</p>
+
+    <p>
+      Enjoy simple little routines that make you feel fresh and happy.
+    </p>
 
     <h3>☁️ Make your space cozy</h3>
-    <p>Fill your room with little things that make you feel peaceful.</p>
+
+    <p>
+      Fill your room with little things that make you feel peaceful.
+    </p>
 
     <h3>☕ Slow little moments</h3>
-    <p>Give yourself permission to slow down and enjoy ordinary moments.</p>
+
+    <p>
+      Give yourself permission to slow down and enjoy ordinary moments.
+    </p>
+
   </div>
+
 </section>
 
+<!-- =========================
+     MOODBOARD
+========================= -->
+
 <section class="inspiration">
+
   <div class="intro">
-    <div class="eyebrow">♡ little things we love ♡</div>
+
+    <div class="eyebrow">
+      ♡ little things we love ♡
+    </div>
+
     <h2>The Girlhood Moodboard</h2>
+
     <p>
       A tiny collection of pretty things, cozy moments and dreamy inspiration.
     </p>
+
   </div>
 
   <div class="moodboard">
 
     <div class="mood-card">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Fashion inspiration">
+
+      <img
+        src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80"
+        alt="Fashion inspiration"
+      >
+
       <h3>🎀 Dress like yourself</h3>
+
     </div>
 
     <div class="mood-card">
-      <img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80" alt="Beauty inspiration">
+
+      <img
+        src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80"
+        alt="Beauty inspiration"
+      >
+
       <h3>💄 Little beauty rituals</h3>
+
     </div>
 
     <div class="mood-card">
-      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80" alt="Cozy room">
+
+      <img
+        src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80"
+        alt="Cozy room"
+      >
+
       <h3>☁️ Make your space cozy</h3>
+
     </div>
 
     <div class="mood-card">
-      <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80" alt="Journal and coffee">
+
+      <img
+        src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80"
+        alt="Journal and coffee"
+      >
+
       <h3>☕ Slow little moments</h3>
+
     </div>
 
   </div>
+
 </section>
 
+<!-- =========================
+     CATEGORIES
+========================= -->
+
 <section class="categories" id="categories">
+
   <div class="intro">
-    <div class="eyebrow">♡ find your little corner ♡</div>
+
+    <div class="eyebrow">
+      ♡ find your little corner ♡
+    </div>
+
     <h2>Everything girlhood.</h2>
-    <p>Pick a mood, pick a topic, or just stay and explore. 🎀</p>
+
+    <p>
+      Pick a mood, pick a topic, or just stay and explore. 🎀
+    </p>
+
   </div>
 
   <div class="category-grid">
@@ -644,13 +814,27 @@ footer {
     </div>
 
   </div>
+
 </section>
 
+<!-- =========================
+     LATEST BLOG
+========================= -->
+
 <section class="latest" id="latest">
+
   <div class="intro">
-    <div class="eyebrow">✧ the latest little loves ✧</div>
+
+    <div class="eyebrow">
+      ✧ the latest little loves ✧
+    </div>
+
     <h2>From the blog</h2>
-    <p>Little things to read when you need a dose of girlhood magic.</p>
+
+    <p>
+      Little things to read when you need a dose of girlhood magic.
+    </p>
+
   </div>
 
   <div class="blog-grid">
@@ -704,16 +888,28 @@ footer {
     </div>
 
   </div>
+
 </section>
 
+<!-- =========================
+     FASHION GUIDE
+========================= -->
+
 <section class="article" id="fashion-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ FASHION GUIDE ♡</div>
+
+    <div class="eyebrow">
+      ♡ FASHION GUIDE ♡
+    </div>
+
     <h2>Cute Outfit Ideas for School 🎀</h2>
 
-    <img class="article-image"
+    <img
+      class="article-image"
       src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80"
-      alt="Cute fashion inspiration">
+      alt="Cute fashion inspiration"
+    >
 
     <p>
       Getting dressed for school doesn't have to be boring.
@@ -722,196 +918,435 @@ footer {
     </p>
 
     <h3>🎀 Keep it simple</h3>
-    <p>Start with your favourite jeans, skirt or trousers and add a cute top. Small details like earrings, hair accessories or a pretty bag can change the whole look.</p>
+
+    <p>
+      Start with your favourite jeans, skirt or trousers and add a cute top.
+      Small details like earrings, hair accessories or a pretty bag can
+      change the whole look.
+    </p>
 
     <h3>🩷 Pick a colour theme</h3>
-    <p>Try choosing two or three colours that look good together.</p>
+
+    <p>
+      Try choosing two or three colours that look good together.
+    </p>
 
     <h3>✨ Add your signature accessory</h3>
-    <p>A bow, bracelet, necklace, cute socks or favourite hair clip can become your little signature.</p>
+
+    <p>
+      A bow, bracelet, necklace, cute socks or favourite hair clip can
+      become your little signature.
+    </p>
 
     <h3>☁️ Comfort comes first</h3>
-    <p>The cutest outfit is one you actually feel comfortable wearing.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      The cutest outfit is one you actually feel comfortable wearing.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
+
+<!-- =========================
+     BEAUTY GUIDE
+========================= -->
 
 <section class="article" id="beauty-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ BEAUTY GUIDE ♡</div>
+
+    <div class="eyebrow">
+      ♡ BEAUTY GUIDE ♡
+    </div>
+
     <h2>Your Simple Glow-Up Routine 💄✨</h2>
 
-    <p>A glow-up isn't about becoming someone else. It's about taking care of yourself and feeling confident in your own skin.</p>
+    <p>
+      A glow-up isn't about becoming someone else.
+      It's about taking care of yourself and feeling confident in your own skin.
+    </p>
 
     <h3>🫧 Start with a fresh face</h3>
-    <p>Wash your face gently and keep your skincare routine simple.</p>
+
+    <p>
+      Wash your face gently and keep your skincare routine simple.
+    </p>
 
     <h3>🎀 Take care of your hair</h3>
-    <p>Brush or style your hair in a way that makes you feel pretty.</p>
+
+    <p>
+      Brush or style your hair in a way that makes you feel pretty.
+    </p>
 
     <h3>💗 Look after yourself</h3>
-    <p>Drink some water, get enough rest and give yourself time to relax.</p>
+
+    <p>
+      Drink some water, get enough rest and give yourself time to relax.
+    </p>
 
     <h3>✨ Add your little finishing touches</h3>
-    <p>Try your favourite lip balm, perfume, jewellery or accessory.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      Try your favourite lip balm, perfume, jewellery or accessory.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
+
+<!-- =========================
+     COZY GUIDE
+========================= -->
 
 <section class="article" id="cozy-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ COZY LIFE GUIDE ♡</div>
+
+    <div class="eyebrow">
+      ♡ COZY LIFE GUIDE ♡
+    </div>
+
     <h2>How to Make an Ordinary Day Feel Special ☕✨</h2>
 
-    <p>You don't need a special occasion to make your day feel magical.</p>
+    <p>
+      You don't need a special occasion to make your day feel magical.
+    </p>
 
     <h3>☕ Make yourself a cozy drink</h3>
-    <p>Make a cup of hot chocolate, tea, coffee or your favourite drink.</p>
+
+    <p>
+      Make a cup of hot chocolate, tea, coffee or your favourite drink.
+    </p>
 
     <h3>🎀 Put on an outfit you love</h3>
-    <p>Wear something that makes you feel comfortable and cute.</p>
+
+    <p>
+      Wear something that makes you feel comfortable and cute.
+    </p>
 
     <h3>🎧 Create a little playlist</h3>
-    <p>Play songs that match your mood.</p>
+
+    <p>
+      Play songs that match your mood.
+    </p>
 
     <h3>🕯️ Make your space cozy</h3>
-    <p>Tidy one small area and make your space feel a little calmer.</p>
+
+    <p>
+      Tidy one small area and make your space feel a little calmer.
+    </p>
 
     <h3>📖 Give yourself a slow moment</h3>
-    <p>Read, journal, watch something comforting or enjoy some quiet time.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      Read, journal, watch something comforting or enjoy some quiet time.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
+
+<!-- =========================
+     SELF CARE GUIDE
+========================= -->
 
 <section class="article" id="selfcare-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ SELF-CARE GUIDE ♡</div>
+
+    <div class="eyebrow">
+      ♡ SELF-CARE GUIDE ♡
+    </div>
+
     <h2>Your Gentle Reset Checklist 🧴✨</h2>
 
-    <p>Sometimes you just need a little reset. Start small, slow down and give yourself some time to breathe.</p>
+    <p>
+      Sometimes you just need a little reset.
+      Start small, slow down and give yourself some time to breathe.
+    </p>
 
     <h3>🫧 Freshen up</h3>
-    <p>Take a shower, wash your face, brush your teeth and put on comfortable clothes.</p>
+
+    <p>
+      Take a shower, wash your face, brush your teeth and put on comfortable clothes.
+    </p>
 
     <h3>🧹 Tidy one little space</h3>
-    <p>Pick one small area, put things away and make your space feel a little calmer.</p>
+
+    <p>
+      Pick one small area, put things away and make your space feel a little calmer.
+    </p>
 
     <h3>💧 Take care of your body</h3>
-    <p>Drink some water, eat something nourishing and give yourself a chance to rest.</p>
+
+    <p>
+      Drink some water, eat something nourishing and give yourself a chance to rest.
+    </p>
 
     <h3>📱 Take a little break</h3>
-    <p>Put your phone down for a few minutes, listen to music, stretch or journal.</p>
+
+    <p>
+      Put your phone down for a few minutes, listen to music, stretch or journal.
+    </p>
 
     <h3>🎀 Do one thing just for you</h3>
-    <p>Read a book, watch your favourite show or do something that makes you happy.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      Read a book, watch your favourite show or do something that makes you happy.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
+
+<!-- =========================
+     GIRL TALK GUIDE
+========================= -->
 
 <section class="article" id="girltalk-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ GIRL TALK ♡</div>
+
+    <div class="eyebrow">
+      ♡ GIRL TALK ♡
+    </div>
+
     <h2>Little Reminders for Growing Confidence 🦋✨</h2>
 
-    <p>Confidence doesn't mean feeling perfect all the time. It's about learning to appreciate yourself and trust yourself.</p>
+    <p>
+      Confidence doesn't mean feeling perfect all the time.
+      It's about learning to appreciate yourself and trust yourself.
+    </p>
 
     <h3>💗 You don't have to be perfect</h3>
-    <p>You don't need to look or act perfect to be worthy of kindness and respect.</p>
+
+    <p>
+      You don't need to look or act perfect to be worthy of kindness and respect.
+    </p>
 
     <h3>🦋 Stop comparing your journey</h3>
-    <p>Focus on your own little wins and the things that make you happy.</p>
+
+    <p>
+      Focus on your own little wins and the things that make you happy.
+    </p>
 
     <h3>🎀 Celebrate the little things</h3>
-    <p>Those little moments count too.</p>
+
+    <p>
+      Those little moments count too.
+    </p>
 
     <h3>✨ Talk to yourself kindly</h3>
-    <p>Speak to yourself the way you would speak to a friend.</p>
+
+    <p>
+      Speak to yourself the way you would speak to a friend.
+    </p>
 
     <h3>🌷 Be yourself</h3>
-    <p>Your style, interests and personality don't have to match anyone else's.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      Your style, interests and personality don't have to match anyone else's.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
+
+<!-- =========================
+     Y2K GUIDE
+========================= -->
 
 <section class="article" id="y2k-guide">
+
   <div class="article-box">
-    <div class="eyebrow">♡ Y2K STYLE GUIDE ♡</div>
+
+    <div class="eyebrow">
+      ♡ Y2K STYLE GUIDE ♡
+    </div>
+
     <h2>Build Your Own Signature Aesthetic 💿✨</h2>
 
-    <p>Your aesthetic doesn't have to fit into one perfect category. Mix the things you love and create a style that feels completely like you.</p>
+    <p>
+      Your aesthetic doesn't have to fit into one perfect category.
+      Mix the things you love and create a style that feels completely like you.
+    </p>
 
     <h3>💿 Find your favourite colours</h3>
-    <p>Think about the colours you naturally gravitate towards.</p>
+
+    <p>
+      Think about the colours you naturally gravitate towards.
+    </p>
 
     <h3>🦋 Mix cute details</h3>
-    <p>Try bows, butterfly clips, glossy accessories, cute bags, jewellery or fun hair accessories.</p>
+
+    <p>
+      Try bows, butterfly clips, glossy accessories, cute bags,
+      jewellery or fun hair accessories.
+    </p>
 
     <h3>🎧 Create your vibe</h3>
-    <p>Your music, room, clothes and favourite things can all inspire your aesthetic.</p>
+
+    <p>
+      Your music, room, clothes and favourite things can all inspire your aesthetic.
+    </p>
 
     <h3>📸 Make a moodboard</h3>
-    <p>Save pictures of outfits, rooms, hairstyles, colours and little details that inspire you.</p>
+
+    <p>
+      Save pictures of outfits, rooms, hairstyles, colours and little details
+      that inspire you.
+    </p>
 
     <h3>💗 Don't be afraid to change</h3>
-    <p>Your aesthetic can change whenever you want.</p>
 
-    <a href="#latest" class="button">← Back to the blog</a>
+    <p>
+      Your aesthetic can change whenever you want.
+    </p>
+
+    <a href="#latest" class="button">
+      ← Back to the blog
+    </a>
+
   </div>
+
 </section>
 
+<!-- =========================
+     QUIZ
+========================= -->
+
 <section class="quiz" id="quiz">
+
   <div class="intro">
-    <div class="eyebrow">♡ FIND YOUR VIBE ♡</div>
+
+    <div class="eyebrow">
+      ♡ FIND YOUR VIBE ♡
+    </div>
+
     <h2>What's Your Girlhood Aesthetic? 🎀</h2>
-    <p>Pick the answer that feels most like you!</p>
+
+    <p>
+      Pick the answer that feels most like you!
+    </p>
+
   </div>
 
   <div class="quiz-box">
 
     <div class="quiz-question" data-question="1">
+
       <h3>1. Pick your perfect afternoon ☁️</h3>
 
-      <button onclick="chooseAnswer(1, 'coquette')">🎀 Getting dressed up and taking cute pictures</button>
-      <button onclick="chooseAnswer(1, 'y2k')">💿 Shopping, music and hanging out</button>
-      <button onclick="chooseAnswer(1, 'cozy')">☕ Staying home with a movie and snacks</button>
-      <button onclick="chooseAnswer(1, 'soft')">🌷 Journaling, skincare and relaxing</button>
+      <button onclick="chooseAnswer(1, 'coquette')">
+        🎀 Getting dressed up and taking cute pictures
+      </button>
+
+      <button onclick="chooseAnswer(1, 'y2k')">
+        💿 Shopping, music and hanging out
+      </button>
+
+      <button onclick="chooseAnswer(1, 'cozy')">
+        ☕ Staying home with a movie and snacks
+      </button>
+
+      <button onclick="chooseAnswer(1, 'soft')">
+        🌷 Journaling, skincare and relaxing
+      </button>
+
     </div>
 
     <div class="quiz-question" data-question="2" style="display:none;">
+
       <h3>2. Pick your dream room 💗</h3>
 
-      <button onclick="chooseAnswer(2, 'coquette')">🎀 Pink, bows and pretty decorations</button>
-      <button onclick="chooseAnswer(2, 'y2k')">💿 Silver, colourful lights and posters</button>
-      <button onclick="chooseAnswer(2, 'cozy')">☁️ Blankets, warm lights and pillows</button>
-      <button onclick="chooseAnswer(2, 'soft')">🌷 Cream, flowers and simple decor</button>
+      <button onclick="chooseAnswer(2, 'coquette')">
+        🎀 Pink, bows and pretty decorations
+      </button>
+
+      <button onclick="chooseAnswer(2, 'y2k')">
+        💿 Silver, colourful lights and posters
+      </button>
+
+      <button onclick="chooseAnswer(2, 'cozy')">
+        ☁️ Blankets, warm lights and pillows
+      </button>
+
+      <button onclick="chooseAnswer(2, 'soft')">
+        🌷 Cream, flowers and simple decor
+      </button>
+
     </div>
 
     <div class="quiz-question" data-question="3" style="display:none;">
+
       <h3>3. Pick your favourite accessory ✨</h3>
 
-      <button onclick="chooseAnswer(3, 'coquette')">🎀 A cute bow</button>
-      <button onclick="chooseAnswer(3, 'y2k')">💿 Sparkly jewellery</button>
-      <button onclick="chooseAnswer(3, 'cozy')">🧸 A cute tote bag</button>
-      <button onclick="chooseAnswer(3, 'soft')">🌷 A simple bracelet</button>
+      <button onclick="chooseAnswer(3, 'coquette')">
+        🎀 A cute bow
+      </button>
+
+      <button onclick="chooseAnswer(3, 'y2k')">
+        💿 Sparkly jewellery
+      </button>
+
+      <button onclick="chooseAnswer(3, 'cozy')">
+        🧸 A cute tote bag
+      </button>
+
+      <button onclick="chooseAnswer(3, 'soft')">
+        🌷 A simple bracelet
+      </button>
+
     </div>
 
     <div id="quiz-result" style="display:none;">
+
       <h2 id="result-title"></h2>
+
       <p id="result-text"></p>
-      <button onclick="restartQuiz()">♡ Take the quiz again</button>
+
+      <button onclick="restartQuiz()">
+        ♡ Take the quiz again
+      </button>
+
     </div>
 
   </div>
+
 </section>
 
+<!-- =========================
+     NEWSLETTER
+========================= -->
+
 <section class="newsletter" id="newsletter">
+
   <div class="newsletter-box">
-    <div class="eyebrow">♡ letters from one girl to another ♡</div>
+
+    <div class="eyebrow">
+      ♡ letters from one girl to another ♡
+    </div>
 
     <h2>A little note in your inbox?</h2>
 
@@ -921,6 +1356,7 @@ footer {
     </p>
 
     <form id="clubForm">
+
       <input
         type="email"
         id="email"
@@ -928,25 +1364,53 @@ footer {
         required
       >
 
-      <button type="submit">Count me in ♡</button>
+      <button type="submit">
+        Count me in ♡
+      </button>
+
     </form>
 
     <div id="message"></div>
+
   </div>
+
 </section>
 
 </main>
 
-<button class="top-button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<!-- =========================
+     BACK TO TOP
+========================= -->
+
+<button
+  class="top-button"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+>
   ↑ Back to the top ♡
 </button>
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
-  <p>♡ Soft heart · Big dreams · Happy girl ♡</p>
-  <p>Made with love & a little sparkle · The Girlhood Club</p>
+
+  <p>
+    ♡ Soft heart · Big dreams · Happy girl ♡
+  </p>
+
+  <p>
+    Made with love & a little sparkle · The Girlhood Club
+  </p>
+
 </footer>
 
 <script>
+
+/* =========================
+   QUIZ
+========================= */
+
 const quizScores = {
   coquette: 0,
   y2k: 0,
@@ -955,6 +1419,7 @@ const quizScores = {
 };
 
 function chooseAnswer(questionNumber, style) {
+
   quizScores[style]++;
 
   const currentQuestion = document.querySelector(
@@ -968,24 +1433,34 @@ function chooseAnswer(questionNumber, style) {
   );
 
   if (nextQuestion) {
+
     nextQuestion.style.display = "block";
+
   } else {
+
     showQuizResult();
+
   }
 }
 
 function showQuizResult() {
+
   let result = "cozy";
   let highestScore = quizScores.cozy;
 
   for (const style in quizScores) {
+
     if (quizScores[style] > highestScore) {
+
       highestScore = quizScores[style];
       result = style;
+
     }
+
   }
 
   const results = {
+
     coquette: {
       title: "🎀 You're a Coquette Girl!",
       text: "You love pretty details, bows, feminine touches and romantic little moments."
@@ -1005,14 +1480,20 @@ function showQuizResult() {
       title: "🌷 You're a Soft Girl!",
       text: "You love gentle colours, self-care, flowers, calm moments and dreamy vibes."
     }
+
   };
 
-  document.getElementById("result-title").textContent = results[result].title;
-  document.getElementById("result-text").textContent = results[result].text;
+  document.getElementById("result-title").textContent =
+    results[result].title;
+
+  document.getElementById("result-text").textContent =
+    results[result].text;
+
   document.getElementById("quiz-result").style.display = "block";
 }
 
 function restartQuiz() {
+
   quizScores.coquette = 0;
   quizScores.y2k = 0;
   quizScores.cozy = 0;
@@ -1021,23 +1502,35 @@ function restartQuiz() {
   document.getElementById("quiz-result").style.display = "none";
 
   document.querySelectorAll(".quiz-question").forEach(function(question) {
+
     question.style.display = "none";
+
   });
 
   document.querySelector('[data-question="1"]').style.display = "block";
 }
 
-document.getElementById("clubForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+/* =========================
+   NEWSLETTER
+========================= */
 
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message");
+document.getElementById("clubForm").addEventListener(
+  "submit",
+  function(event) {
 
-  message.textContent =
-    "You're officially on the list, " + email + "! ♡";
+    event.preventDefault();
 
-  document.getElementById("email").value = "";
-});
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message");
+
+    message.textContent =
+      "You're officially on the list, " + email + "! ♡";
+
+    document.getElementById("email").value = "";
+
+  }
+);
+
 </script>
 
 </body>
