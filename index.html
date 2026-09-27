@@ -7,7 +7,6 @@
 
 <title>The Girlhood Club ♡</title>
 
-<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3MH686CQ9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -17,11 +16,6 @@
 </script>
 
 <style>
-
-/* =========================
-   BASIC RESET
-========================= */
-
 * {
   box-sizing: border-box;
 }
@@ -44,9 +38,7 @@ main {
   min-width: 0;
 }
 
-/* =========================
-   SIDEBAR
-========================= */
+/* SIDEBAR */
 
 .sidebar {
   position: fixed;
@@ -84,6 +76,7 @@ main {
   padding: 11px 14px;
   border-radius: 14px;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 
 .sidebar-links a:hover,
@@ -93,6 +86,12 @@ main {
   transform: translateX(3px);
 }
 
+.sidebar-links a.active {
+  background: #f8e5ef;
+  color: #c05287;
+  font-weight: bold;
+}
+
 .sidebar-bottom {
   margin-top: auto;
   display: flex;
@@ -100,9 +99,19 @@ main {
   gap: 8px;
 }
 
-/* =========================
-   HERO
-========================= */
+/* GENERAL */
+
+.hero,
+.note,
+.inspiration,
+.categories,
+.latest,
+.article,
+.quiz,
+.newsletter,
+.special-section {
+  scroll-margin-top: 20px;
+}
 
 .hero {
   min-height: 85vh;
@@ -147,6 +156,9 @@ main {
   border-radius: 999px;
   text-decoration: none;
   transition: 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .button:hover {
@@ -160,9 +172,7 @@ main {
   animation: floatSparkle 3s ease-in-out infinite;
 }
 
-/* =========================
-   NOTE
-========================= */
+/* NOTE */
 
 .note {
   padding: 80px 7%;
@@ -185,9 +195,7 @@ main {
   margin-top: 30px;
 }
 
-/* =========================
-   MOODBOARD
-========================= */
+/* MOODBOARD */
 
 .inspiration {
   background: #fff8fc;
@@ -235,16 +243,15 @@ main {
   color: #a84f7c;
 }
 
-/* =========================
-   CATEGORIES
-========================= */
+/* CARDS */
 
 .categories {
   padding: 80px 7%;
 }
 
 .category-grid,
-.blog-grid {
+.blog-grid,
+.special-grid {
   max-width: 1100px;
   margin: 35px auto 0;
   display: grid;
@@ -253,7 +260,8 @@ main {
 }
 
 .category-card,
-.post-card {
+.post-card,
+.special-card {
   background: #fff8fc;
   padding: 28px;
   border-radius: 25px;
@@ -262,18 +270,16 @@ main {
 }
 
 .category-card:hover,
-.post-card:hover {
+.post-card:hover,
+.special-card:hover {
   transform: translateY(-6px);
 }
 
 .category-card h3,
-.post-card h3 {
+.post-card h3,
+.special-card h3 {
   color: #a84f7c;
 }
-
-/* =========================
-   BLOG
-========================= */
 
 .latest {
   background: #fff8fc;
@@ -290,9 +296,7 @@ main {
   text-decoration: none;
 }
 
-/* =========================
-   ARTICLES
-========================= */
+/* ARTICLES */
 
 .article {
   background: #fff;
@@ -329,9 +333,7 @@ main {
   display: block;
 }
 
-/* =========================
-   QUIZ
-========================= */
+/* QUIZ */
 
 .quiz {
   background: #fff8fc;
@@ -382,9 +384,7 @@ main {
   font-size: 2rem;
 }
 
-/* =========================
-   NEWSLETTER
-========================= */
+/* NEWSLETTER */
 
 .newsletter {
   padding: 80px 7%;
@@ -424,9 +424,99 @@ main {
   color: #a84f7c;
 }
 
-/* =========================
-   TOP BUTTON
-========================= */
+/* NEW SIDEBAR SECTIONS */
+
+.special-section {
+  padding: 90px 7%;
+  background: #fff;
+}
+
+.special-section:nth-of-type(even) {
+  background: #fff8fc;
+}
+
+.special-box {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.special-box h2 {
+  color: #a84f7c;
+  font-size: 2.7rem;
+}
+
+.special-box > p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.special-card {
+  text-align: left;
+  background: white;
+}
+
+.special-card .icon {
+  font-size: 2rem;
+}
+
+.special-card h3 {
+  margin-bottom: 8px;
+}
+
+/* SETTINGS */
+
+.settings-box,
+.profile-box {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 35px;
+  background: white;
+  border: 1px solid #f1dce7;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.setting-row,
+.profile-row {
+  padding: 18px 0;
+  border-bottom: 1px solid #f1dce7;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.setting-row:last-child,
+.profile-row:last-child {
+  border-bottom: none;
+}
+
+.setting-row label {
+  font-weight: bold;
+  color: #a84f7c;
+}
+
+.setting-row select {
+  padding: 8px 12px;
+  border: 1px solid #e8cbd9;
+  border-radius: 12px;
+  color: #7d4a64;
+  background: #fff8fc;
+}
+
+/* SAVED */
+
+.saved-message {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 30px;
+  background: #fff8fc;
+  border: 1px solid #f1dce7;
+  border-radius: 25px;
+}
+
+/* TOP BUTTON */
 
 .top-button {
   display: block;
@@ -441,9 +531,7 @@ main {
   cursor: pointer;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer {
   background: #fff8fc;
@@ -452,12 +540,11 @@ footer {
   border-top: 1px solid #f1dce7;
 }
 
-/* =========================
-   ANIMATIONS
-========================= */
+/* ANIMATIONS */
 
 .category-card,
-.post-card {
+.post-card,
+.special-card {
   animation: appear 0.8s ease both;
 }
 
@@ -483,9 +570,7 @@ footer {
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 750px) {
 
@@ -534,7 +619,9 @@ footer {
   }
 
   .article-box,
-  .newsletter-box {
+  .newsletter-box,
+  .settings-box,
+  .profile-box {
     padding: 30px 20px;
   }
 
@@ -542,16 +629,19 @@ footer {
     width: 100%;
     margin-bottom: 10px;
   }
-}
 
+  .setting-row,
+  .profile-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     SIDEBAR
-========================= -->
+<!-- SIDEBAR -->
 
 <nav class="sidebar">
 
@@ -567,21 +657,21 @@ footer {
     <a href="#quiz">🧠 Quizzes</a>
     <a href="#newsletter">💌 Join the Club</a>
 
-    <a href="#home">🎀 Girlhood</a>
-    <a href="#beauty-guide">💅 Glow-Up</a>
-    <a href="#girltalk-guide">🫶 Friendship</a>
-    <a href="#home">📚 Study Hub</a>
-    <a href="#home">🎧 Music</a>
-    <a href="#home">📔 Journal</a>
-    <a href="#home">🔖 Saved</a>
+    <a href="#girlhood">🎀 Girlhood</a>
+    <a href="#glowup">💅 Glow-Up</a>
+    <a href="#friendship">🫶 Friendship</a>
+    <a href="#study">📚 Study Hub</a>
+    <a href="#music">🎧 Music</a>
+    <a href="#journal">📔 Journal</a>
+    <a href="#saved">🔖 Saved</a>
 
   </div>
 
   <div class="sidebar-bottom">
 
-    <a href="#home">💎 Girlhood+</a>
-    <a href="#home">⚙️ Settings</a>
-    <a href="#home">👤 Profile</a>
+    <a href="#girlhood-plus">💎 Girlhood+</a>
+    <a href="#settings">⚙️ Settings</a>
+    <a href="#profile">👤 Profile</a>
 
   </div>
 
@@ -589,9 +679,7 @@ footer {
 
 <main>
 
-<!-- =========================
-     HOME
-========================= -->
+<!-- HOME -->
 
 <section class="hero" id="home">
 
@@ -623,17 +711,13 @@ footer {
 
 </section>
 
-<!-- =========================
-     LITTLE REMINDER
-========================= -->
+<!-- NOTE -->
 
 <section class="note">
 
   <div class="note-box">
 
-    <div class="eyebrow">
-      ♡ a little reminder ♡
-    </div>
+    <div class="eyebrow">♡ a little reminder ♡</div>
 
     <h2>Dear girl,</h2>
 
@@ -646,36 +730,22 @@ footer {
     </p>
 
     <h3>🎀 Dress like yourself</h3>
-
-    <p>
-      Wear things that make you feel comfortable, confident and completely you.
-    </p>
+    <p>Wear things that make you feel comfortable, confident and completely you.</p>
 
     <h3>💄 Little beauty rituals</h3>
-
-    <p>
-      Enjoy simple little routines that make you feel fresh and happy.
-    </p>
+    <p>Enjoy simple little routines that make you feel fresh and happy.</p>
 
     <h3>☁️ Make your space cozy</h3>
-
-    <p>
-      Fill your room with little things that make you feel peaceful.
-    </p>
+    <p>Fill your room with little things that make you feel peaceful.</p>
 
     <h3>☕ Slow little moments</h3>
-
-    <p>
-      Give yourself permission to slow down and enjoy ordinary moments.
-    </p>
+    <p>Give yourself permission to slow down and enjoy ordinary moments.</p>
 
   </div>
 
 </section>
 
-<!-- =========================
-     MOODBOARD
-========================= -->
+<!-- MOODBOARD -->
 
 <section class="inspiration">
 
@@ -696,56 +766,42 @@ footer {
   <div class="moodboard">
 
     <div class="mood-card">
-
       <img
         src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80"
         alt="Fashion inspiration"
       >
-
       <h3>🎀 Dress like yourself</h3>
-
     </div>
 
     <div class="mood-card">
-
       <img
         src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?auto=format&fit=crop&w=700&q=80"
         alt="Beauty inspiration"
       >
-
       <h3>💄 Little beauty rituals</h3>
-
     </div>
 
     <div class="mood-card">
-
       <img
         src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=700&q=80"
         alt="Cozy room"
       >
-
       <h3>☁️ Make your space cozy</h3>
-
     </div>
 
     <div class="mood-card">
-
       <img
         src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=700&q=80"
         alt="Journal and coffee"
       >
-
       <h3>☕ Slow little moments</h3>
-
     </div>
 
   </div>
 
 </section>
 
-<!-- =========================
-     CATEGORIES
-========================= -->
+<!-- EXPLORE -->
 
 <section class="categories" id="categories">
 
@@ -817,9 +873,7 @@ footer {
 
 </section>
 
-<!-- =========================
-     LATEST BLOG
-========================= -->
+<!-- BLOG -->
 
 <section class="latest" id="latest">
 
@@ -891,17 +945,13 @@ footer {
 
 </section>
 
-<!-- =========================
-     FASHION GUIDE
-========================= -->
+<!-- FASHION -->
 
 <section class="article" id="fashion-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ FASHION GUIDE ♡
-    </div>
+    <div class="eyebrow">♡ FASHION GUIDE ♡</div>
 
     <h2>Cute Outfit Ideas for School 🎀</h2>
 
@@ -918,51 +968,37 @@ footer {
     </p>
 
     <h3>🎀 Keep it simple</h3>
-
     <p>
       Start with your favourite jeans, skirt or trousers and add a cute top.
-      Small details like earrings, hair accessories or a pretty bag can
-      change the whole look.
+      Small details like earrings, hair accessories or a pretty bag can change the whole look.
     </p>
 
     <h3>🩷 Pick a colour theme</h3>
-
-    <p>
-      Try choosing two or three colours that look good together.
-    </p>
+    <p>Try choosing two or three colours that look good together.</p>
 
     <h3>✨ Add your signature accessory</h3>
-
     <p>
-      A bow, bracelet, necklace, cute socks or favourite hair clip can
-      become your little signature.
+      A bow, bracelet, necklace, cute socks or favourite hair clip can become your little signature.
     </p>
 
     <h3>☁️ Comfort comes first</h3>
-
     <p>
       The cutest outfit is one you actually feel comfortable wearing.
     </p>
 
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     BEAUTY GUIDE
-========================= -->
+<!-- BEAUTY -->
 
 <section class="article" id="beauty-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ BEAUTY GUIDE ♡
-    </div>
+    <div class="eyebrow">♡ BEAUTY GUIDE ♡</div>
 
     <h2>Your Simple Glow-Up Routine 💄✨</h2>
 
@@ -972,104 +1008,63 @@ footer {
     </p>
 
     <h3>🫧 Start with a fresh face</h3>
-
-    <p>
-      Wash your face gently and keep your skincare routine simple.
-    </p>
+    <p>Wash your face gently and keep your skincare routine simple.</p>
 
     <h3>🎀 Take care of your hair</h3>
-
-    <p>
-      Brush or style your hair in a way that makes you feel pretty.
-    </p>
+    <p>Brush or style your hair in a way that makes you feel pretty.</p>
 
     <h3>💗 Look after yourself</h3>
-
-    <p>
-      Drink some water, get enough rest and give yourself time to relax.
-    </p>
+    <p>Drink some water, get enough rest and give yourself time to relax.</p>
 
     <h3>✨ Add your little finishing touches</h3>
+    <p>Try your favourite lip balm, perfume, jewellery or accessory.</p>
 
-    <p>
-      Try your favourite lip balm, perfume, jewellery or accessory.
-    </p>
-
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     COZY GUIDE
-========================= -->
+<!-- COZY -->
 
 <section class="article" id="cozy-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ COZY LIFE GUIDE ♡
-    </div>
+    <div class="eyebrow">♡ COZY LIFE GUIDE ♡</div>
 
     <h2>How to Make an Ordinary Day Feel Special ☕✨</h2>
 
-    <p>
-      You don't need a special occasion to make your day feel magical.
-    </p>
+    <p>You don't need a special occasion to make your day feel magical.</p>
 
     <h3>☕ Make yourself a cozy drink</h3>
-
-    <p>
-      Make a cup of hot chocolate, tea, coffee or your favourite drink.
-    </p>
+    <p>Make a cup of hot chocolate, tea, coffee or your favourite drink.</p>
 
     <h3>🎀 Put on an outfit you love</h3>
-
-    <p>
-      Wear something that makes you feel comfortable and cute.
-    </p>
+    <p>Wear something that makes you feel comfortable and cute.</p>
 
     <h3>🎧 Create a little playlist</h3>
-
-    <p>
-      Play songs that match your mood.
-    </p>
+    <p>Play songs that match your mood.</p>
 
     <h3>🕯️ Make your space cozy</h3>
-
-    <p>
-      Tidy one small area and make your space feel a little calmer.
-    </p>
+    <p>Tidy one small area and make your space feel a little calmer.</p>
 
     <h3>📖 Give yourself a slow moment</h3>
+    <p>Read, journal, watch something comforting or enjoy some quiet time.</p>
 
-    <p>
-      Read, journal, watch something comforting or enjoy some quiet time.
-    </p>
-
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     SELF CARE GUIDE
-========================= -->
+<!-- SELF CARE -->
 
 <section class="article" id="selfcare-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ SELF-CARE GUIDE ♡
-    </div>
+    <div class="eyebrow">♡ SELF-CARE GUIDE ♡</div>
 
     <h2>Your Gentle Reset Checklist 🧴✨</h2>
 
@@ -1079,54 +1074,33 @@ footer {
     </p>
 
     <h3>🫧 Freshen up</h3>
-
-    <p>
-      Take a shower, wash your face, brush your teeth and put on comfortable clothes.
-    </p>
+    <p>Take a shower, wash your face, brush your teeth and put on comfortable clothes.</p>
 
     <h3>🧹 Tidy one little space</h3>
-
-    <p>
-      Pick one small area, put things away and make your space feel a little calmer.
-    </p>
+    <p>Pick one small area, put things away and make your space feel a little calmer.</p>
 
     <h3>💧 Take care of your body</h3>
-
-    <p>
-      Drink some water, eat something nourishing and give yourself a chance to rest.
-    </p>
+    <p>Drink some water, eat something nourishing and give yourself a chance to rest.</p>
 
     <h3>📱 Take a little break</h3>
-
-    <p>
-      Put your phone down for a few minutes, listen to music, stretch or journal.
-    </p>
+    <p>Put your phone down for a few minutes, listen to music, stretch or journal.</p>
 
     <h3>🎀 Do one thing just for you</h3>
+    <p>Read a book, watch your favourite show or do something that makes you happy.</p>
 
-    <p>
-      Read a book, watch your favourite show or do something that makes you happy.
-    </p>
-
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     GIRL TALK GUIDE
-========================= -->
+<!-- GIRL TALK -->
 
 <section class="article" id="girltalk-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ GIRL TALK ♡
-    </div>
+    <div class="eyebrow">♡ GIRL TALK ♡</div>
 
     <h2>Little Reminders for Growing Confidence 🦋✨</h2>
 
@@ -1136,54 +1110,33 @@ footer {
     </p>
 
     <h3>💗 You don't have to be perfect</h3>
-
-    <p>
-      You don't need to look or act perfect to be worthy of kindness and respect.
-    </p>
+    <p>You don't need to look or act perfect to be worthy of kindness and respect.</p>
 
     <h3>🦋 Stop comparing your journey</h3>
-
-    <p>
-      Focus on your own little wins and the things that make you happy.
-    </p>
+    <p>Focus on your own little wins and the things that make you happy.</p>
 
     <h3>🎀 Celebrate the little things</h3>
-
-    <p>
-      Those little moments count too.
-    </p>
+    <p>Those little moments count too.</p>
 
     <h3>✨ Talk to yourself kindly</h3>
-
-    <p>
-      Speak to yourself the way you would speak to a friend.
-    </p>
+    <p>Speak to yourself the way you would speak to a friend.</p>
 
     <h3>🌷 Be yourself</h3>
+    <p>Your style, interests and personality don't have to match anyone else's.</p>
 
-    <p>
-      Your style, interests and personality don't have to match anyone else's.
-    </p>
-
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     Y2K GUIDE
-========================= -->
+<!-- Y2K -->
 
 <section class="article" id="y2k-guide">
 
   <div class="article-box">
 
-    <div class="eyebrow">
-      ♡ Y2K STYLE GUIDE ♡
-    </div>
+    <div class="eyebrow">♡ Y2K STYLE GUIDE ♡</div>
 
     <h2>Build Your Own Signature Aesthetic 💿✨</h2>
 
@@ -1193,62 +1146,427 @@ footer {
     </p>
 
     <h3>💿 Find your favourite colours</h3>
-
-    <p>
-      Think about the colours you naturally gravitate towards.
-    </p>
+    <p>Think about the colours you naturally gravitate towards.</p>
 
     <h3>🦋 Mix cute details</h3>
-
-    <p>
-      Try bows, butterfly clips, glossy accessories, cute bags,
-      jewellery or fun hair accessories.
-    </p>
+    <p>Try bows, butterfly clips, glossy accessories, cute bags, jewellery or fun hair accessories.</p>
 
     <h3>🎧 Create your vibe</h3>
-
-    <p>
-      Your music, room, clothes and favourite things can all inspire your aesthetic.
-    </p>
+    <p>Your music, room, clothes and favourite things can all inspire your aesthetic.</p>
 
     <h3>📸 Make a moodboard</h3>
-
-    <p>
-      Save pictures of outfits, rooms, hairstyles, colours and little details
-      that inspire you.
-    </p>
+    <p>Save pictures of outfits, rooms, hairstyles, colours and little details that inspire you.</p>
 
     <h3>💗 Don't be afraid to change</h3>
+    <p>Your aesthetic can change whenever you want.</p>
 
-    <p>
-      Your aesthetic can change whenever you want.
-    </p>
-
-    <a href="#latest" class="button">
-      ← Back to the blog
-    </a>
+    <a href="#latest" class="button">← Back to the blog</a>
 
   </div>
 
 </section>
 
-<!-- =========================
-     QUIZ
-========================= -->
+<!-- GIRLHOOD -->
+
+<section class="special-section" id="girlhood">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ GIRLHOOD ♡</div>
+
+    <h2>Your little girlhood corner 🎀</h2>
+
+    <p>
+      A place for all the tiny things that make growing up feel special:
+      friendships, dreams, school days, confidence, memories and discovering who you are.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">🌷</div>
+        <h3>Growing at your own pace</h3>
+        <p>You don't have to have everything figured out right now.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🦋</div>
+        <h3>Making memories</h3>
+        <p>Take pictures, write things down and enjoy the little moments.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Finding yourself</h3>
+        <p>Your style and interests can change. That's part of growing.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GLOW UP -->
+
+<section class="special-section" id="glowup">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ GLOW-UP ♡</div>
+
+    <h2>Your gentle glow-up corner 💅✨</h2>
+
+    <p>
+      Glow-ups aren't about becoming somebody else.
+      They're about caring for yourself and feeling more comfortable being you.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">🫧</div>
+        <h3>Fresh & clean</h3>
+        <p>Build simple routines that help you feel fresh and comfortable.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Find your style</h3>
+        <p>Experiment with outfits, accessories and hairstyles you love.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">✨</div>
+        <h3>Confidence</h3>
+        <p>Celebrate your little wins and speak kindly to yourself.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FRIENDSHIP -->
+
+<section class="special-section" id="friendship">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ FRIENDSHIP ♡</div>
+
+    <h2>Friendship corner 🫶</h2>
+
+    <p>
+      Friendships can be messy, funny, comforting and beautiful.
+      Here's your little space for friendship thoughts.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">💗</div>
+        <h3>Good friends</h3>
+        <p>Look for friendships where you can be yourself and feel respected.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🦋</div>
+        <h3>Growing apart</h3>
+        <p>Sometimes people change and friendships change too. That can be part of growing.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Be a good friend</h3>
+        <p>Listen, communicate, celebrate your friends and respect their boundaries.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STUDY HUB -->
+
+<section class="special-section" id="study">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ STUDY HUB ♡</div>
+
+    <h2>Your cozy study corner 📚</h2>
+
+    <p>
+      Make studying feel a little less overwhelming with simple,
+      cozy routines.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">📝</div>
+        <h3>Make a plan</h3>
+        <p>Write down what you need to finish and tackle one thing at a time.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">☕</div>
+        <h3>Create your study vibe</h3>
+        <p>Get your favourite drink, clear your desk and play calm background music.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🌷</div>
+        <h3>Take breaks</h3>
+        <p>Give yourself little breaks so your brain has time to recharge.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MUSIC -->
+
+<section class="special-section" id="music">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ MUSIC ♡</div>
+
+    <h2>Your girlhood soundtrack 🎧</h2>
+
+    <p>
+      Build playlists for every little mood.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Getting ready</h3>
+        <p>Upbeat songs for getting dressed and feeling confident.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">☁️</div>
+        <h3>Cozy afternoon</h3>
+        <p>Soft songs for journaling, reading or relaxing.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">💿</div>
+        <h3>Y2K energy</h3>
+        <p>Fun throwback-inspired songs for your nostalgic moments.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JOURNAL -->
+
+<section class="special-section" id="journal">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ JOURNAL ♡</div>
+
+    <h2>Your little journal corner 📔</h2>
+
+    <p>
+      Grab a notebook and answer one of these whenever you feel like writing.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">🌷</div>
+        <h3>Today's little joy</h3>
+        <p>What is one small thing that made you smile today?</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">✨</div>
+        <h3>Future me</h3>
+        <p>What kind of person do you want to become?</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Dream day</h3>
+        <p>Describe your perfect ordinary day from morning to night.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SAVED -->
+
+<section class="special-section" id="saved">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ SAVED ♡</div>
+
+    <h2>Your saved little things 🔖</h2>
+
+    <div class="saved-message">
+
+      <h3>♡ Your collection is waiting for you!</h3>
+
+      <p>
+        This is your personal space for saving your favourite
+        Girlhood Club posts, ideas and inspiration.
+      </p>
+
+      <p>
+        More saving features can be added here as your website grows. 🎀
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GIRLHOOD PLUS -->
+
+<section class="special-section" id="girlhood-plus">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ GIRLHOOD+ ♡</div>
+
+    <h2>A little extra magic 💎</h2>
+
+    <p>
+      Girlhood+ is your special corner for extra ideas,
+      challenges and exclusive-feeling content.
+    </p>
+
+    <div class="special-grid">
+
+      <div class="special-card">
+        <div class="icon">✨</div>
+        <h3>Monthly challenges</h3>
+        <p>Little challenges to help you try something new.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">🎀</div>
+        <h3>Pretty planners</h3>
+        <p>Ideas for planning your school days, weekends and dreams.</p>
+      </div>
+
+      <div class="special-card">
+        <div class="icon">💗</div>
+        <h3>Confidence notes</h3>
+        <p>Little reminders to keep in your pocket whenever you need them.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SETTINGS -->
+
+<section class="special-section" id="settings">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ SETTINGS ♡</div>
+
+    <h2>Make the club yours ⚙️</h2>
+
+    <div class="settings-box">
+
+      <div class="setting-row">
+        <label for="fontChoice">Reading style</label>
+
+        <select id="fontChoice">
+          <option value="Georgia">Classic</option>
+          <option value="Arial">Simple</option>
+          <option value="Trebuchet MS">Soft & modern</option>
+        </select>
+      </div>
+
+      <div class="setting-row">
+        <label>Website theme</label>
+        <span>🎀 Soft Pink</span>
+      </div>
+
+      <div class="setting-row">
+        <label>Animations</label>
+        <span>✨ On</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PROFILE -->
+
+<section class="special-section" id="profile">
+
+  <div class="special-box">
+
+    <div class="eyebrow">♡ PROFILE ♡</div>
+
+    <h2>Your Girlhood Club profile 👤</h2>
+
+    <div class="profile-box">
+
+      <div class="profile-row">
+        <strong>Nickname</strong>
+        <span>Girlhood Girl 🎀</span>
+      </div>
+
+      <div class="profile-row">
+        <strong>Vibe</strong>
+        <span>✨ Dreamy</span>
+      </div>
+
+      <div class="profile-row">
+        <strong>Favourite corner</strong>
+        <span>☕ Cozy Life</span>
+      </div>
+
+      <div class="profile-row">
+        <strong>Status</strong>
+        <span>💗 Living my girlhood</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- QUIZ -->
 
 <section class="quiz" id="quiz">
 
   <div class="intro">
 
-    <div class="eyebrow">
-      ♡ FIND YOUR VIBE ♡
-    </div>
+    <div class="eyebrow">♡ FIND YOUR VIBE ♡</div>
 
     <h2>What's Your Girlhood Aesthetic? 🎀</h2>
 
-    <p>
-      Pick the answer that feels most like you!
-    </p>
+    <p>Pick the answer that feels most like you!</p>
 
   </div>
 
@@ -1336,9 +1654,7 @@ footer {
 
 </section>
 
-<!-- =========================
-     NEWSLETTER
-========================= -->
+<!-- NEWSLETTER -->
 
 <section class="newsletter" id="newsletter">
 
@@ -1378,10 +1694,6 @@ footer {
 
 </main>
 
-<!-- =========================
-     BACK TO TOP
-========================= -->
-
 <button
   class="top-button"
   onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
@@ -1389,15 +1701,9 @@ footer {
   ↑ Back to the top ♡
 </button>
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-  <p>
-    ♡ Soft heart · Big dreams · Happy girl ♡
-  </p>
+  <p>♡ Soft heart · Big dreams · Happy girl ♡</p>
 
   <p>
     Made with love & a little sparkle · The Girlhood Club
@@ -1407,9 +1713,7 @@ footer {
 
 <script>
 
-/* =========================
-   QUIZ
-========================= */
+/* QUIZ */
 
 const quizScores = {
   coquette: 0,
@@ -1433,13 +1737,9 @@ function chooseAnswer(questionNumber, style) {
   );
 
   if (nextQuestion) {
-
     nextQuestion.style.display = "block";
-
   } else {
-
     showQuizResult();
-
   }
 }
 
@@ -1451,10 +1751,8 @@ function showQuizResult() {
   for (const style in quizScores) {
 
     if (quizScores[style] > highestScore) {
-
       highestScore = quizScores[style];
       result = style;
-
     }
 
   }
@@ -1502,17 +1800,13 @@ function restartQuiz() {
   document.getElementById("quiz-result").style.display = "none";
 
   document.querySelectorAll(".quiz-question").forEach(function(question) {
-
     question.style.display = "none";
-
   });
 
   document.querySelector('[data-question="1"]').style.display = "block";
 }
 
-/* =========================
-   NEWSLETTER
-========================= */
+/* NEWSLETTER */
 
 document.getElementById("clubForm").addEventListener(
   "submit",
@@ -1530,6 +1824,38 @@ document.getElementById("clubForm").addEventListener(
 
   }
 );
+
+/* SETTINGS */
+
+document.getElementById("fontChoice").addEventListener(
+  "change",
+  function() {
+
+    document.body.style.fontFamily =
+      this.value + ', Georgia, "Times New Roman", serif';
+
+  }
+);
+
+/* ACTIVE SIDEBAR BUTTON */
+
+const sidebarLinks = document.querySelectorAll(
+  ".sidebar-links a, .sidebar-bottom a"
+);
+
+sidebarLinks.forEach(function(link) {
+
+  link.addEventListener("click", function() {
+
+    sidebarLinks.forEach(function(item) {
+      item.classList.remove("active");
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
 
 </script>
 
