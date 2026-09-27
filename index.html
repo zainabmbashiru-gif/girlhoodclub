@@ -1440,38 +1440,128 @@ footer {
 
 <!-- GIRLHOOD PLUS -->
 
-<section class="special-section" id="girlhood-plus">
+<section class="girlhood-plus" id="girlhood-plus">
 
-  <div class="special-box">
+  <div class="premium-box">
 
-    <div class="eyebrow">♡ GIRLHOOD+ ♡</div>
+    <div class="premium-badge">
+      💎 GIRLHOOD+ PREMIUM
+    </div>
 
-    <h2>A little extra magic 💎</h2>
+    <h2>Welcome to the <em>exclusive</em> side of girlhood ✨</h2>
 
-    <p>
-      Girlhood+ is your special corner for extra ideas,
-      challenges and exclusive-feeling content.
+    <p class="premium-intro">
+      A little more magic, a little more inspiration,
+      and a cozy space made especially for girls who want
+      to make their everyday life feel extra special. 🎀
     </p>
 
-    <div class="special-grid">
+    <div class="member-card">
 
-      <div class="special-card">
-        <div class="icon">✨</div>
-        <h3>Monthly challenges</h3>
-        <p>Little challenges to help you try something new.</p>
+      <div class="member-crown">👑</div>
+
+      <div>
+        <div class="member-label">GIRLHOOD+ MEMBER</div>
+        <h3>You're entering your premium era. 💎</h3>
+        <p>
+          Exclusive ideas, challenges, journal prompts,
+          planners and little surprises await you.
+        </p>
       </div>
 
-      <div class="special-card">
-        <div class="icon">🎀</div>
-        <h3>Pretty planners</h3>
-        <p>Ideas for planning your school days, weekends and dreams.</p>
+    </div>
+
+    <h3 class="exclusive-title">
+      ✨ Your exclusive Girlhood+ collection
+    </h3>
+
+    <div class="premium-grid">
+
+      <div class="premium-card">
+        <div class="premium-icon">🎀</div>
+        <span class="lock">🔒</span>
+        <h3>Monthly Girlhood Challenges</h3>
+        <p>
+          Cute monthly challenges designed to help you
+          try new things and make sweet memories.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
       </div>
 
-      <div class="special-card">
-        <div class="icon">💗</div>
-        <h3>Confidence notes</h3>
-        <p>Little reminders to keep in your pocket whenever you need them.</p>
+      <div class="premium-card">
+        <div class="premium-icon">📔</div>
+        <span class="lock">🔒</span>
+        <h3>Exclusive Journal Prompts</h3>
+        <p>
+          Thoughtful prompts for dreams, confidence,
+          friendships and discovering yourself.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
       </div>
+
+      <div class="premium-card">
+        <div class="premium-icon">🗓️</div>
+        <span class="lock">🔒</span>
+        <h3>Pretty Girlhood Planners</h3>
+        <p>
+          Plan your school days, self-care routines,
+          goals and cozy weekends.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
+      </div>
+
+      <div class="premium-card">
+        <div class="premium-icon">💌</div>
+        <span class="lock">🔒</span>
+        <h3>Secret Girlhood Notes</h3>
+        <p>
+          Little confidence reminders and sweet notes
+          to open whenever you need them.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
+      </div>
+
+      <div class="premium-card">
+        <div class="premium-icon">🖼️</div>
+        <span class="lock">🔒</span>
+        <h3>Exclusive Wallpapers</h3>
+        <p>
+          Pretty phone and computer wallpapers made
+          especially for Girlhood+.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
+      </div>
+
+      <div class="premium-card">
+        <div class="premium-icon">✨</div>
+        <span class="lock">🔒</span>
+        <h3>Monthly Little Surprise</h3>
+        <p>
+          Every month brings something new and cute
+          to discover inside the club.
+        </p>
+        <span class="premium-tag">PREMIUM</span>
+      </div>
+
+    </div>
+
+    <div class="premium-join">
+
+      <div class="premium-sparkles">
+        ୨୧ ✧ 💎 ✧ ୨୧
+      </div>
+
+      <h2>Ready to enter Girlhood+?</h2>
+
+      <p>
+        Unlock your little collection of premium girlhood magic.
+      </p>
+
+      <button class="premium-button" onclick="showPremiumMessage()">
+        💎 Join Girlhood+ →
+      </button>
+
+      <div id="premium-message"></div>
 
     </div>
 
@@ -1823,7 +1913,188 @@ document.getElementById("clubForm").addEventListener(
 
   }
 );
+/* GIRLHOOD+ PREMIUM */
 
+.girlhood-plus {
+  padding: 100px 7%;
+  background:
+    radial-gradient(circle at top left, #fff0f7, transparent 35%),
+    radial-gradient(circle at bottom right, #f8e4ef, transparent 35%),
+    #fffafc;
+  scroll-margin-top: 20px;
+}
+
+.premium-box {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.premium-badge {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f4d7e5, #ead0df);
+  color: #8c4267;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  box-shadow: 0 5px 20px rgba(150, 80, 115, 0.12);
+}
+
+.premium-box h2 {
+  color: #9d4d75;
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.premium-box h2 em {
+  color: #c66b98;
+}
+
+.premium-intro {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1.08rem;
+}
+
+.member-card {
+  max-width: 850px;
+  margin: 40px auto;
+  padding: 35px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #fff, #fff3f8);
+  border: 1px solid #e6bfd2;
+  box-shadow: 0 15px 40px rgba(120, 60, 90, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  text-align: left;
+}
+
+.member-crown {
+  font-size: 3.5rem;
+}
+
+.member-label {
+  color: #b35b83;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.member-card h3 {
+  color: #9d4d75;
+  font-size: 1.5rem;
+  margin: 5px 0;
+}
+
+.member-card p {
+  margin: 0;
+}
+
+.exclusive-title {
+  color: #a84f7c;
+  margin: 55px 0 25px;
+  font-size: 1.8rem;
+}
+
+.premium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+}
+
+.premium-card {
+  position: relative;
+  padding: 30px;
+  min-height: 250px;
+  background: white;
+  border: 1px solid #efd4e1;
+  border-radius: 25px;
+  box-shadow: 0 8px 25px rgba(100, 60, 85, 0.06);
+  transition: 0.3s ease;
+}
+
+.premium-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(100, 60, 85, 0.12);
+}
+
+.premium-icon {
+  font-size: 2.3rem;
+}
+
+.lock {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 1.1rem;
+}
+
+.premium-card h3 {
+  color: #a84f7c;
+  margin: 15px 0 8px;
+}
+
+.premium-card p {
+  font-size: 0.95rem;
+}
+
+.premium-tag {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #f8e5ef;
+  color: #a84f7c;
+  font-size: 0.7rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.premium-join {
+  max-width: 750px;
+  margin: 60px auto 0;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #fff, #fff0f7);
+  border: 1px solid #e6bfd2;
+  border-radius: 35px;
+  box-shadow: 0 15px 40px rgba(120, 60, 90, 0.1);
+}
+
+.premium-sparkles {
+  font-size: 1.7rem;
+}
+
+.premium-join h2 {
+  font-size: 2rem;
+  margin: 15px 0 8px;
+}
+
+.premium-button {
+  border: none;
+  padding: 15px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #c66b98, #a84f7c);
+  color: white;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(168, 79, 124, 0.2);
+}
+
+.premium-button:hover {
+  transform: translateY(-3px);
+}
+
+#premium-message {
+  margin-top: 18px;
+  color: #a84f7c;
+  font-weight: bold;
+}
 /* SETTINGS */
 
 document.getElementById("fontChoice").addEventListener(
@@ -1864,6 +2135,10 @@ function goToSection(sectionId) {
       block: "start"
     });
   }
+}
+  function showPremiumMessage() {
+  document.getElementById("premium-message").textContent =
+    "💎 Girlhood+ is getting ready for its premium launch! Stay tuned. ♡";
 }
 </script>
 
