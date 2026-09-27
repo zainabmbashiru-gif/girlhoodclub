@@ -676,7 +676,6 @@ footer {
   </div>
 
 </nav>
-
 <main>
 
 <!-- HOME -->
@@ -1856,7 +1855,16 @@ sidebarLinks.forEach(function(link) {
   });
 
 });
+function goToSection(sectionId) {
+  const section = document.getElementById(sectionId);
 
+  if (section) {
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+}
 </script>
 
 </body>
